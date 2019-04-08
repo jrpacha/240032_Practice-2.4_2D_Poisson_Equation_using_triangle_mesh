@@ -62,8 +62,7 @@ Q(freeNods)=0.0;
 %Reduced system
 Fm=F(freeNods)-K(freeNods,fixedNods)*u(fixedNods);
    %take into account that, unlike this case in point,
-   %u can be different from zero at the fixed 
-   %fixed nodes can be different from zero. 
+   %u can be different from zero at the fixed nodes. 
 Fm=Fm+Q(freeNods); 
 Km=K(freeNods,freeNods);
 
