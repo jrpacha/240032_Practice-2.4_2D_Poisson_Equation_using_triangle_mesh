@@ -57,11 +57,14 @@ freeNods=setdiff(1:numNod,fixedNods);
 %---------- Essential B.C.
 u(fixedNods)=0.0;
 %---------- Natural B.C.
-u(freeNods)=0.0;
+Q(freeNods)=0.0;
 
 %Reduced system
 Fm=F(freeNods)-K(freeNods,fixedNods)*u(fixedNods);
-Fm=Fm+Q(freeNods);
+   %take into account that, unlike this case in point,
+   %u can be different from zero at the fixed 
+   %fixed nodes can be different from zero. 
+Fm=Fm+Q(freeNods); 
 Km=K(freeNods,freeNods);
 
 %Solve the reduced system
