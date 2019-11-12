@@ -1,4 +1,4 @@
-function [Ke, Fe] = linearTriangElem(coeff,nodes,elem,e)
+function [Ke, Fe] = linearTriangElement(coeff,nodes,elem,e)
 %For triangular elements, returns the element stiff matrix, 
 %Ke, and the Fe vector for each element depending on the 
 %coeff vector for the model equation.

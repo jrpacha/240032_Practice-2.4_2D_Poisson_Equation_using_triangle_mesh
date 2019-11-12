@@ -40,7 +40,7 @@ Q=zeros(numNod,1);
 F=zeros(numNod,1);
 
 for e=1:numElem
-    [Ke, Fe] = linearTriangElem(coeff,nodes,elem,e);
+    [Ke, Fe] = linearTriangElement(coeff,nodes,elem,e);
     % 
     %Assemble the elements
     %
@@ -70,8 +70,8 @@ Km=K(freeNods,freeNods);
 um=Km\Fm;
 u(freeNods)=um;
 
-%PostProcess: Compute secondary variables and plot
-%results
+%PostProcess: compute secondary variables, write table, and contour plot
+%Secondary variables
 Q=K*u-F;
 
 fprintf('\n%6s%8s%12s%12s%11s\n',...
