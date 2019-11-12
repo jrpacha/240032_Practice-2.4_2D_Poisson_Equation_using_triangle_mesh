@@ -1,4 +1,5 @@
-function plotContourSolutionLT(nodes,elem,valueToShow,titol,colorScale)
+function plotContourSolutionLT(nodes,elem,valueToShow,titol,...
+    xLabel,yLabel,colorScale)
 %
 % plot color contour values for triangles and quadrilateral meshes
 % (c)Numerical Factory
@@ -18,5 +19,7 @@ colormap(colorScale)
  plot(X,Y,'k')
  fill(X,Y,plotValues)
  title(titol,'interpreter','LaTeX') ;         
+ xlabel(xLabel,'interpreter','LaTeX');
+ ylabel(yLabel,'interpreter','LaTeX','rot',360);
  axis equal;
  colorbar
