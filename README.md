@@ -3,7 +3,7 @@
 ## Matlab session Tuesday 12-11-2019
 
 ### P2.4 - Poisson's Equation (2D linear triangles)
-
+ 
 You can find the session's guide ---together with other extra material files---,
 at Toni Susin's 'Numerical Factory', 
 
