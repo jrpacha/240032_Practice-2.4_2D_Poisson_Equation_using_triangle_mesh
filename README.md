@@ -1,6 +1,4 @@
-# matlabSession-240032_12-11-2019
-
-## Matlab session Tuesday 12-11-2019
+# Practice 2.4
 
 ### P2.4 - Poisson's Equation (2D linear triangles)
  
