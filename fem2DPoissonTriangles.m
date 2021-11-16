@@ -53,11 +53,17 @@ for e=1:numElem
 end
 fixedNods=[4,5,6];
 freeNods=setdiff(1:numNod,fixedNods);
+
 %Boundary conditions (B.C.)
-%---------- Essential B.C.
-u(fixedNods)=0.0;
+
+%Remark. We shall set natural boundary conditions first, then 
+%the essential boundary conditions.
+
 %---------- Natural B.C.
 Q(freeNods)=0.0;
+
+%---------- Essential B.C.
+u(fixedNods)=0.0;
 
 %Reduced system
 Fm=F(freeNods)-K(freeNods,fixedNods)*u(fixedNods);
